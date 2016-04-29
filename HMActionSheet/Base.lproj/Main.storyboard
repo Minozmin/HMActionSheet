@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1v-bv-ppu">
+                                <rect key="frame" x="200" y="66" width="200" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3xZ-b8-VxW"/>
+                                </constraints>
+                                <state key="normal" title="图文actionsheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onImageAndTextActionsheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZi-2k-70p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgv-pi-lHU">
+                                <rect key="frame" x="200" y="167" width="200" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="文字actionsheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTextActionsheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YAm-y0-VBs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zev-km-GPS">
+                                <rect key="frame" x="279" y="116" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akK-Rn-BGT">
+                                <rect key="frame" x="279" y="217" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hgv-pi-lHU" firstAttribute="top" secondItem="Zev-km-GPS" secondAttribute="bottom" constant="30" id="Ab7-Pj-VdU"/>
+                            <constraint firstItem="q1v-bv-ppu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DlG-Lw-GTV"/>
+                            <constraint firstItem="akK-Rn-BGT" firstAttribute="top" secondItem="Hgv-pi-lHU" secondAttribute="bottom" constant="20" id="GOP-lV-ebl"/>
+                            <constraint firstItem="Zev-km-GPS" firstAttribute="centerX" secondItem="q1v-bv-ppu" secondAttribute="centerX" id="Ope-V3-RQd"/>
+                            <constraint firstItem="Hgv-pi-lHU" firstAttribute="centerX" secondItem="q1v-bv-ppu" secondAttribute="centerX" id="cRE-A3-enZ"/>
+                            <constraint firstItem="Hgv-pi-lHU" firstAttribute="width" secondItem="q1v-bv-ppu" secondAttribute="width" id="jhi-EV-bGm"/>
+                            <constraint firstItem="q1v-bv-ppu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="lYf-1K-UgH"/>
+                            <constraint firstItem="Zev-km-GPS" firstAttribute="top" secondItem="q1v-bv-ppu" secondAttribute="bottom" constant="20" id="tIw-CA-7oc"/>
+                            <constraint firstItem="akK-Rn-BGT" firstAttribute="centerX" secondItem="Hgv-pi-lHU" secondAttribute="centerX" id="wz8-YR-PrG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelImageAndText" destination="Zev-km-GPS" id="0Be-3Z-UDy"/>
+                        <outlet property="labelText" destination="akK-Rn-BGT" id="Jlm-fG-oYi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

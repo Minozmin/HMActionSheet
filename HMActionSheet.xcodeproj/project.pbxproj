@@ -13,6 +13,13 @@
 		123C61AB1CD2FE9D0014CA7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 123C61A91CD2FE9D0014CA7D /* Main.storyboard */; };
 		123C61AD1CD2FE9D0014CA7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 123C61AC1CD2FE9D0014CA7D /* Assets.xcassets */; };
 		123C61B01CD2FE9D0014CA7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 123C61AE1CD2FE9D0014CA7D /* LaunchScreen.storyboard */; };
+		123C61BA1CD302FB0014CA7D /* HMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 123C61B91CD302FB0014CA7D /* HMActionSheet.m */; };
+		123C61C01CD305110014CA7D /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 123C61BF1CD305110014CA7D /* UIView+Frame.m */; };
+		123C61C71CD30BB10014CA7D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 123C61C61CD30BB10014CA7D /* BaseTableViewCell.m */; };
+		123C61CB1CD30D990014CA7D /* ImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 123C61C91CD30D990014CA7D /* ImageAndTextCell.m */; };
+		123C61CC1CD30D990014CA7D /* ImageAndTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 123C61CA1CD30D990014CA7D /* ImageAndTextCell.xib */; };
+		123C61D01CD30DBD0014CA7D /* TextActionsheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 123C61CE1CD30DBD0014CA7D /* TextActionsheetCell.m */; };
+		123C61D11CD30DBD0014CA7D /* TextActionsheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 123C61CF1CD30DBD0014CA7D /* TextActionsheetCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,18 @@
 		123C61AC1CD2FE9D0014CA7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		123C61AF1CD2FE9D0014CA7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		123C61B11CD2FE9D0014CA7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		123C61B81CD302FB0014CA7D /* HMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMActionSheet.h; sourceTree = "<group>"; };
+		123C61B91CD302FB0014CA7D /* HMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMActionSheet.m; sourceTree = "<group>"; };
+		123C61BE1CD305110014CA7D /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		123C61BF1CD305110014CA7D /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		123C61C51CD30BB10014CA7D /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		123C61C61CD30BB10014CA7D /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		123C61C81CD30D990014CA7D /* ImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAndTextCell.h; sourceTree = "<group>"; };
+		123C61C91CD30D990014CA7D /* ImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAndTextCell.m; sourceTree = "<group>"; };
+		123C61CA1CD30D990014CA7D /* ImageAndTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageAndTextCell.xib; sourceTree = "<group>"; };
+		123C61CD1CD30DBD0014CA7D /* TextActionsheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextActionsheetCell.h; sourceTree = "<group>"; };
+		123C61CE1CD30DBD0014CA7D /* TextActionsheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextActionsheetCell.m; sourceTree = "<group>"; };
+		123C61CF1CD30DBD0014CA7D /* TextActionsheetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextActionsheetCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 		123C619F1CD2FE9D0014CA7D /* HMActionSheet */ = {
 			isa = PBXGroup;
 			children = (
+				123C61B71CD302DC0014CA7D /* HMActionSheet */,
 				123C61A31CD2FE9D0014CA7D /* AppDelegate.h */,
 				123C61A41CD2FE9D0014CA7D /* AppDelegate.m */,
 				123C61A61CD2FE9D0014CA7D /* ViewController.h */,
@@ -77,6 +97,25 @@
 				123C61A11CD2FE9D0014CA7D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		123C61B71CD302DC0014CA7D /* HMActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				123C61B81CD302FB0014CA7D /* HMActionSheet.h */,
+				123C61B91CD302FB0014CA7D /* HMActionSheet.m */,
+				123C61BE1CD305110014CA7D /* UIView+Frame.h */,
+				123C61BF1CD305110014CA7D /* UIView+Frame.m */,
+				123C61C51CD30BB10014CA7D /* BaseTableViewCell.h */,
+				123C61C61CD30BB10014CA7D /* BaseTableViewCell.m */,
+				123C61C81CD30D990014CA7D /* ImageAndTextCell.h */,
+				123C61C91CD30D990014CA7D /* ImageAndTextCell.m */,
+				123C61CA1CD30D990014CA7D /* ImageAndTextCell.xib */,
+				123C61CD1CD30DBD0014CA7D /* TextActionsheetCell.h */,
+				123C61CE1CD30DBD0014CA7D /* TextActionsheetCell.m */,
+				123C61CF1CD30DBD0014CA7D /* TextActionsheetCell.xib */,
+			);
+			path = HMActionSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +175,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123C61CC1CD30D990014CA7D /* ImageAndTextCell.xib in Resources */,
+				123C61D11CD30DBD0014CA7D /* TextActionsheetCell.xib in Resources */,
 				123C61B01CD2FE9D0014CA7D /* LaunchScreen.storyboard in Resources */,
 				123C61AD1CD2FE9D0014CA7D /* Assets.xcassets in Resources */,
 				123C61AB1CD2FE9D0014CA7D /* Main.storyboard in Resources */,
@@ -149,8 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123C61CB1CD30D990014CA7D /* ImageAndTextCell.m in Sources */,
+				123C61C71CD30BB10014CA7D /* BaseTableViewCell.m in Sources */,
+				123C61C01CD305110014CA7D /* UIView+Frame.m in Sources */,
 				123C61A81CD2FE9D0014CA7D /* ViewController.m in Sources */,
+				123C61D01CD30DBD0014CA7D /* TextActionsheetCell.m in Sources */,
 				123C61A51CD2FE9D0014CA7D /* AppDelegate.m in Sources */,
+				123C61BA1CD302FB0014CA7D /* HMActionSheet.m in Sources */,
 				123C61A21CD2FE9D0014CA7D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +348,7 @@
 				123C61B61CD2FE9D0014CA7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
