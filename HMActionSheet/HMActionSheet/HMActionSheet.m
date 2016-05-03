@@ -38,6 +38,42 @@
     return self;
 }
 
+- (instancetype)initWithTitle:(NSString *)title actoinSheetType:(HMActionSheetType)type
+{
+    self = [super init];
+    if (self) {
+        _title = title;
+        [self registerNib:type];
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles actoinSheetType:(HMActionSheetType)type completion:(void(^)(NSString *string))completion
+{
+    self = [super init];
+    if (self) {
+        self.title = title;
+        self.cancelTitle = cancelButtonTitle;
+        self.batchArray = otherButtonTitles;
+        self.block = [completion copy];
+        [self registerNib:type];
+    }
+    return self;
+}
+
+- (void)registerNib:(HMActionSheetType)type
+{
+    switch (type) {
+        case HMActionSheetTypeText:
+            [self.tableview registerNib:[UINib nibWithNibName:@"TextActionsheetCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"Cell"];
+            break;
+            
+        case HMActionSheetTypeImageAndText:
+            [self.tableview registerNib:[UINib nibWithNibName:@"ImageAndTextCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"Cell"];
+            break;
+    }
+}
+
 - (void)setBatchArray:(NSArray *)batchArray
 {
     _batchArray = batchArray;
@@ -93,6 +129,15 @@
     _title = title;
 }
 
+- (void)setCancelTitle:(NSString *)cancelTitle
+{
+    _cancelTitle = cancelTitle;
+    [self.buttonCancel setTitle:_cancelTitle
+              forState:UIControlStateNormal];
+    [self.buttonCancel setTitleColor:HSQColorBlue
+                   forState:UIControlStateNormal];
+}
+
 - (void)installView
 {
     [self addSubview:self.viewBackground];
@@ -145,10 +190,6 @@
         
         [self blurEffect:_buttonCancel];
         [_buttonCancel addSubview:clickBtn];
-        [clickBtn setTitle:@"取消"
-                  forState:UIControlStateNormal];
-        [clickBtn setTitleColor:HSQColorBlue
-                       forState:UIControlStateNormal];
         clickBtn.titleLabel.font = [UIFont systemFontOfSize:18.0f];
         [clickBtn addTarget:self
                      action:@selector(onCancel)
